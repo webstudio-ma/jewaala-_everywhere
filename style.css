@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f6f1;
+    color: #18251f;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 80px;
+    background: #10231c;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4ad63;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 700px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,30,23,.85),
+            rgba(10,30,23,.25)
+        );
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+
+    width: 86%;
+    color: white;
+}
+
+.hero-text > p:first-child {
+    color: #d4ad63;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: .95;
+    margin: 20px 0;
+}
+
+.hero-text > p {
+    max-width: 500px;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    background: #d4ad63;
+    color: #18251f;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* TITLES */
+
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title p {
+    color: #a37e3d;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.title h2 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.title span {
+    color: #69736e;
+}
+
+
+/* VOYAGES */
+
+.voyages {
+    padding: 100px 7%;
+}
+
+.voyages-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.voyage-card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+    transition: .3s;
+}
+
+.voyage-card:hover {
+    transform: translateY(-8px);
+}
+
+.voyage-card > img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.voyage-info {
+    padding: 25px;
+}
+
+.voyage-info span {
+    color: #a37e3d;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.voyage-info h3 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.voyage-info p {
+    color: #68726d;
+    margin-bottom: 15px;
+}
+
+.voyage-info strong {
+    color: #a37e3d;
+    font-size: 20px;
+}
+
+
+/* VOYAGEURS */
+
+.voyageurs {
+    background: #e9e5da;
+    padding: 100px 7%;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* CONTACT */
+
+.contact {
+    background: #10231c;
+    color: white;
+
+    padding: 100px 7%;
+}
+
+.contact .title h2 {
+    color: white;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #b8c0bc;
+    margin: 12px 0;
+}
+
+.whatsapp,
+.instagram {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    margin: 15px 10px 15px 0;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.instagram {
+    background: #d4ad63;
+    color: #18251f;
+}
+
+
+/* FORM */
+
+form {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #d4ad63;
+
+    color: #18251f;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #08140f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+footer p {
+    color: #8d9993;
+    margin-top: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .voyages-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
